@@ -1,6 +1,6 @@
 # TV Series Browser app
 
-This project was scaffolded using `create-vue`
+This project was scaffolded using `create-vue`. The deployed app can be viewed [here](https://series-browser.netlify.app/)
 
 ## To improve
 
