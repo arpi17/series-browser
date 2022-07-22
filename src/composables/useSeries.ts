@@ -25,7 +25,7 @@ export function useSeries(id?: number):
     if (!serie.value) {
       fetch(`https://api.tvmaze.com/shows/${id}`)
         .then((res) => res.json())
-        .then((data) => (serie.value = data))
+        .then((data: SerieData) => (serie.value = data))
         .catch((e) => console.error(e));
     }
 
@@ -36,7 +36,7 @@ export function useSeries(id?: number):
   if (!series.value.size) {
     fetch('https://api.tvmaze.com/shows')
       .then((res) => res.json())
-      .then((data) => {
+      .then((data: SerieData[]) => {
         for (const { id, ...movie } of data) {
           series.value.set(id, { id, ...movie });
 
